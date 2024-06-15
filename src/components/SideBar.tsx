@@ -25,15 +25,13 @@ import {useDispatch, useSelector} from 'react-redux'
 import { UseSelector } from 'react-redux'   
 import { redirect } from "next/dist/server/api-utils";
 import {setActive,setShow} from "../app/todoSlice"
+import { RootState } from '../../src/app/store';
 
 export default function SideBar() {    
 
-  // const [active,setActive] = useState(0);  
-  const show = useSelector(state=> state.show); 
   const router = useRouter();
-
-
-  const active = useSelector((state)=> state.active); 
+  
+  const { show, active } = useSelector((state: RootState) => state);
 
   const Dispatch = useDispatch(); 
 

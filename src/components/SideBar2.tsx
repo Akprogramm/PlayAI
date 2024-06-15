@@ -31,19 +31,18 @@ import alfread from "../components/Assets/alfread.png";
 import bruce from "../components/Assets/bruce.png";
 import batman from "../components/Assets/batman.png";
 import colombo from "../components/Assets/colombo.png";
+import { RootState } from '../../src/app/store'; 
 
 
-export default function SideBar() {    
+export default function SideBar() {     
 
-  // const [active,setActive] = useState(0);  
-  const show = useSelector(state=> state.show);  
   const router = useRouter();
 
-  const active = useSelector((state)=> state.active); 
+  const { show, active } = useSelector((state: RootState) => state);
 
   const Dispatch = useDispatch(); 
  
-  const changeShow = (item) => {
+  const changeShow = (item) => { 
     Dispatch(setShow(false)); 
     Dispatch(setActive(item));
     console.log(show);       
