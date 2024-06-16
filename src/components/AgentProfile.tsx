@@ -9,12 +9,13 @@ import {useDispatch, useSelector} from 'react-redux'
 import { UseSelector } from 'react-redux'
 import {setShow} from "../app/todoSlice"    
 import { useRouter } from 'next/navigation'
+import { RootState } from '../../src/app/store';
 
 export default function AgentProfile() {
 
   const router = useRouter(); 
 
-  const show = useSelector(state => state.show);   
+  const { show } = useSelector((state: RootState) => state);
 
   const Dispatch = useDispatch();
 

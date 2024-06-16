@@ -10,10 +10,11 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import {useDispatch, useSelector} from 'react-redux'
 import { UseSelector } from 'react-redux'
 import {setShow} from "../app/todoSlice"    
+import { RootState } from '../../src/app/store'; 
 
 export default function Agent() {
 
-const show = useSelector(state => state.show);   
+const { show } = useSelector((state: RootState) => state);
 
   const Dispatch = useDispatch();
 

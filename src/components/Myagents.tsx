@@ -5,10 +5,12 @@ import { UseSelector } from 'react-redux'
 import {setShow} from "../app/todoSlice" 
 import MenuIcon from '@mui/icons-material/Menu';
 import Card from './Card';
+import { RootState } from '../../src/app/store';
+
 
 const Myagents = () => {
 
-    const show = useSelector((state)=> state.show); 
+  const { show } = useSelector((state: RootState) => state);  
 
     const Dispatch = useDispatch();
   

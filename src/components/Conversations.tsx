@@ -14,10 +14,11 @@ import faceimage from "./Assets/faceimage.png";
 import faceimage2 from "./Assets/faceimage2.png";
 import faceimage3 from "./Assets/faceimage3.png";
 import faceimage4 from "./Assets/faceimage4.png";
+import { RootState } from '../../src/app/store';
 
 const Conversations = () => {
   
-  const show = useSelector((state)=> state.show); 
+  const { show } = useSelector((state: RootState) => state);
 
   const Dispatch = useDispatch();
 

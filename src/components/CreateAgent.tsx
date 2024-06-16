@@ -13,12 +13,14 @@ import logo2 from "./Assets/logo2.png"
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import save from "./Assets/save.png";
 import { useRouter } from 'next/navigation';
+import { RootState } from '../../src/app/store';
+
 
 const CreateAgent = () => {
 
   const router = useRouter();
 
-  const show = useSelector((state)=> state.show);  
+  const { show } = useSelector((state: RootState) => state);  
 
   const Dispatch = useDispatch();
 

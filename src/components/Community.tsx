@@ -6,11 +6,12 @@ import {setShow} from "../app/todoSlice"
 import MenuIcon from '@mui/icons-material/Menu';
 import Box from './Box';
 import Messages from "./Messages"
+import { RootState } from '../../src/app/store';
 
 
 const Community = () => {
   
-  const show = useSelector((state)=> state.show); 
+  const { show } = useSelector((state: RootState) => state);
 
   const Dispatch = useDispatch();
 
