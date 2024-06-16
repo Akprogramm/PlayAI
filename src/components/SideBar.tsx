@@ -43,7 +43,7 @@ export default function SideBar() {
         
   return (
     
- <div className={`${show? "trans2" : "trans"} example z-50 overflow-scroll p-3 flex justify-between flex-[0.4] xl:flex-[0.13] xx:flex-[0.09] xx:min-w-fit none flex-col bg-[#000000] text-white min-h-screen max-h-screen border-r-[2px] border-[#151515]`}>   
+ <div className={`${show? "trans2" : "trans"} example z-50 overflow-scroll p-3 flex justify-between max-w-[200px] sm:max-w-max sm:flex-[0.4] xl:flex-[0.13] xx:flex-[0.09] xx:min-w-fit none flex-col bg-[#000000] text-white min-h-screen max-h-screen border-r-[2px] border-[#151515]`}>   
 
       <div className="top flex flex-col justify-between pl-1 w-[100%] h-min">
         <Image          
